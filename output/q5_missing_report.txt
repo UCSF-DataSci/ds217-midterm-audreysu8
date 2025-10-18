@@ -2,7 +2,6 @@ Missing Data Report After Cleaning Steps Applied:
 
 
 Columns with Remaining Missing Data:
-Unnamed: 0            0
 patient_id            0
 age                   0
 sex                   0
