@@ -96,7 +96,7 @@ def fill_missing(df: pd.DataFrame, column: str, strategy: str = 'mean') -> pd.Da
         df_filled[column] = df_filled[column].fillna(fill_value)
     # here, we have a time series column. We are imputing missing valus with forward fill
     elif strategy == 'ffill':
-        df_filled[column] = df.fillna(method='ffill')[column] #df_filled[column].ffill()
+        df_filled[column] = df_filled[column].ffill()
     else:
         raise ValueError("Invalid strategy. Use 'mean', 'median', or 'ffill'.")
 
