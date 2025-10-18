@@ -1,4 +1,5 @@
 # TODO: Add shebang line: #!/bin/bash
+#!/bin/bash
 # Assignment 5, Question 8: Pipeline Automation Script
 # Run the clinical trial data analysis pipeline
 
@@ -13,4 +14,19 @@ echo "Starting clinical trial data pipeline..." > reports/pipeline_log.txt
 # Use either `$?` or `||` operator to check exit codes and stop on failure
 # Add a log entry for each notebook execution or failure
 # jupyter nbconvert --execute --to notebook q4_exploration.ipynb
+notebooks=("q4_exploration.ipynb" "q5_missing_data.ipynb" "q6_transformation.ipynb" "q7_aggregation.ipynb")
+
+for nb in "${notebooks[@]}"; do
+    
+    jupyter nbconvert --to notebook --execute "$nb" --output "$nb" >> reports/pipeline_log.txt 2>&1
+    EXIT_CODE=$?
+    
+    if [ $EXIT_CODE -ne 0 ]; then
+        echo "$nb failed. Now, I will stop the pipeline." >> reports/pipeline_log.txt
+        exit $EXIT_CODE
+    else
+        echo "$nb loaded without issue." >> reports/pipeline_log.txt
+    fi
+done
+
 echo "Pipeline complete!" >> reports/pipeline_log.txt
