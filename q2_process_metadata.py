@@ -142,6 +142,8 @@ if __name__ == '__main__':
     config = parse_config('q2_config.txt')
     validation = validate_config(config)
     generate_sample_data('data/sample_data.csv', config)
+    print("Configuration:", config)
+    print("Validation Results:", validation)
     # TODO: Read the generated file and calculate statistics
     with open('data/sample_data.csv', 'r') as file:
         data = [int(line.strip()) for line in file if line.strip().isdigit()]
