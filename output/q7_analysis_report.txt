@@ -2,10 +2,10 @@ Analysis Report
 =================
 
 Mean CVD Outcome CVD by Intervention Group:
- outcome_cvd
-    0.336530
-    0.319482
-    0.333633
+ outcome_cvd_rate
+         0.336530
+         0.319482
+         0.333633
 We see that for the control group, around 33.6 percent of patients experienced a cardiovascular event. For the Treatment B group, around 33.3 percent of patients experineced a cardiovasscular event (this is similar to the control group). For the Treatment A group, around 31.9 percent of patients experienced a cardiovascular event, which is lower than both the Control and Treatment B groups. This suggests that Treatment A offers a slight improvement over control in reducing the incidence of cardiovascular events
 
 
