@@ -1,5 +1,5 @@
-# TODO: Add shebang line: #!/bin/bash
 #!/bin/bash
+# TODO: Add shebang line: #!/bin/bash
 # Assignment 5, Question 8: Pipeline Automation Script
 # Run the clinical trial data analysis pipeline
 
