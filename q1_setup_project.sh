@@ -1,5 +1,5 @@
-# TODO: Add shebang line: #!/bin/bash
 #!/bin/bash
+# TODO: Add shebang line: #!/bin/bash
 # Assignment 5, Question 1: Project Setup Script
 # This script creates the directory structure for the clinical trial analysis project
 # TODO: Make this script executable (if not already)
